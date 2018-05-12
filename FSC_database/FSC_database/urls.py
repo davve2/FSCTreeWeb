@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
+
+from FrancisellaDatabase.views import user_listview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('users/', user_listview),
+    
+    path('', TemplateView.as_view(template_name="home.html")),
+    path('info/', TemplateView.as_view(template_name="info.html")),
+    path('contact/', TemplateView.as_view(template_name="contact.html")),
 ]

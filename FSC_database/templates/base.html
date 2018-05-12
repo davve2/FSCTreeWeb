@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang=us-en>
+	<head>
+		<title>{% block head_title %} FSCDB.com {% endblock head_title %}</title>
+		<style>
+		{% include 'snippets/css.html' %}
+		</style>
+	</head>
+	
+	<body>
+		{% include 'snippets/navigation.html' %}
+		
+
+		<div class='container'>
+		{% block content %}{% endblock content %}
+		</div>
+		{% include 'snippets/js.html' %}
+	</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block head_title %} User list {% endblock head_title %}
+
+{% block content %}
+<h3> User list </h3>
+
+<ul>
+	{% for user in user_list %}
+	 <li>{{ user.name }}, {{user.location}} <br/> Registered: {{ user.timestamp }} GMT <br/> Updated: {{ user.updated }} GMT </li>
+	{% endfor %}
+</ul>
+
+{% endblock content %}
+
