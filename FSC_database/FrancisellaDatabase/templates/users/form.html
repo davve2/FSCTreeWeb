@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block head_title %} Add User {% endblock head_title %}
+
+
+{% if form.errors.non_field_errors %}
+{{ form.errors }}
+{% endif %}
+
+{% block content %}
+<form method="POST"> {% csrf_token %}
+ {{ form.as_p }}
+ <button type='submit'> Save </button>
+</form>
+{% endblock content %}
+

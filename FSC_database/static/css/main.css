@@ -1,0 +1,14 @@
+body{
+	background-color: white;
+}
+
+body.title {
+	font-family: Arial;
+	font-size: 32pt;
+	font-weight: bold;
+}
+
+body.navigation {
+	background-color: lightblue;
+}
+

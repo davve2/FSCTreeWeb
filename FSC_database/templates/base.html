@@ -1,19 +1,23 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html lang=us-en>
 	<head>
 		<title>{% block head_title %} FSCDB.com {% endblock head_title %}</title>
-		<style>
 		{% include 'snippets/css.html' %}
-		</style>
 	</head>
 	
 	<body>
-		{% include 'snippets/navigation.html' %}
-		
-
-		<div class='container'>
+		<div class="title">
 		{% block content %}{% endblock content %}
 		</div>
 		{% include 'snippets/js.html' %}
+		<div class='navigation'>
+		{% include 'snippets/navigation.html' %}
+		<div class='container'>
+		
+		</div>
+		</div>
 	</body>
 </html>
